@@ -1,0 +1,66 @@
+body{
+    background: #00f;
+    font-size: 30px;
+}
+#small,#medium{
+    display:none;
+}
+#large{
+    display: initial;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+#large h1{
+    flex-basis: 100%;
+    text-align: center;
+}
+#large p{
+    flex-basis: 33%;
+}
+@media only screen and (max-width: 768px){
+    body{
+        background: #0f0;
+        font-size: 20px;
+    }
+    #small,#large{
+        display: none;
+    }
+    #medium{
+        display:initial;
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    #medium h1{
+    flex-basis: 100%;
+    text-align: center;
+    }
+    #medium h1+p{
+        flex-basis: 66%;
+    }
+    #medium p+p{
+        flex-basis: 33%;
+    }
+    #medium p+p+p{
+        flex-basis: 100%;
+    }
+}
+@media only screen and (max-width: 300px){
+    body{
+        background: #f00;
+        font-size: 10px;
+    }
+    #medium,#large{
+        display: none;
+    }
+    #small{
+        display:initial;
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+}
+
+
+
